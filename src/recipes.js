@@ -5,11 +5,11 @@ const recipes = [
       price: 12.99,
       image: "https://i.ibb.co/68c9bLv/greek-salad.jpg",
       description:
-        "The famous greek salad of crispy lettuce, peppers, olives and our Chicago style fota cheese, garnished with crunchy garlic and rosemary croutons",
+        "The famous greek salad of crispy lettuce, peppers, olives and our Chicago style fota cheese.",
     },
     {
       id: 2,
-      title: "Bruchetta",
+      title: "Bruschetta",
       price: 5.99,
       image: "https://i.ibb.co/317GqZv/Bruchetta.png",
       description:

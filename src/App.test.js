@@ -7,11 +7,11 @@ import Header from './components/Header';
 
 test('Renders the Header heading', () => {
     render(<BrowserRouter><App /></BrowserRouter>);
-    const headingElement = screen.getByText("Reserve Table");
+    const headingElement = screen.getByText("Reserve a table");
     expect(headingElement).toBeInTheDocument();
 
-    const reserveButton = screen.getByRole("button");
-    fireEvent.click(reserveButton);
+    const reserveButton = screen.getAllByRole("button");
+    fireEvent.click(reserveButton[0]);
 
     const headingElementNew = screen.getByText("Choose Date");
     expect(headingElementNew).toBeInTheDocument();
@@ -19,12 +19,12 @@ test('Renders the Header heading', () => {
 
 test('Initialize/Update Times', () => {
   render(<BrowserRouter><App /></BrowserRouter>);
-  const reserveButton = screen.getByRole("button");
-  fireEvent.click(reserveButton);
+  const reserveButton = screen.getAllByRole("button");
+  fireEvent.click(reserveButton[0]);
 
   const testTime = []
-  // userEvent.selectOptions(screen.getByLabelText("Choose Time"),screen.getByRole('option', { name: testTime}))
-  // expect(screen.getByRole('option', { name: testTime}).selected).toBe(true);
+  //userEvent.selectOptions(screen.getByLabelText("Choose Time"),screen.getByRole('option', { name: testTime}))
+  //expect(screen.getByRole('option', { name: testTime}).selected).toBe(true);
 
 
 })
